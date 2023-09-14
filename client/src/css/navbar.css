@@ -1,0 +1,110 @@
+/* Base styling for larger screens */
+.navbar {
+    color: whitesmoke;
+    background-color: black;
+    /* Set text color to contrast with the background */
+}
+
+.navbar .container {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust to your preference */
+}
+
+.navbar .container .logo img {
+    width: 150px;
+    height: 100px;
+    background-color: transparent;
+}
+
+.navbar .container .links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar .container .links h6 {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar .container .links span {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar .container .links .write {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 20;
+    border-color: azure;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.navbar .container .links .write:hover {
+    color: teal;
+    background-color: transparent;
+    border: 1px solid teal;
+}
+
+/* Toggle button for smaller screens */
+.navbar .toggle-button {
+    display: none; /* Hide the button by default on larger screens */
+    cursor: pointer;
+    font-size: 24px;
+    color: whitesmoke;
+    background: transparent;
+    border: none;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar .container .logo img {
+        width: 150px;
+    }
+
+    .navbar .container .links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .navbar .container .links h6 {
+        font-size: 20px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .navbar .container .links span {
+        display: inline-block;
+        padding: 5px;
+        /* Add border to each link */
+        margin: 3px;
+    }
+
+    .navbar .container .links .write {
+        width: 40px;
+        /* Adjust button size for smaller screens */
+        height: 40px;
+        font-size: 14px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .navbar .toggle-button {
+        display: block; /* Show the button on smaller screens */
+        margin-top: 10px; /* Adjust spacing as needed */
+    }
+}

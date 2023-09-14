@@ -1,0 +1,99 @@
+/* CSS for Home component */
+.home {
+    background-image: url('https://media.istockphoto.com/id/1307027684/photo/beauty-soft-pastel-half-tone-with-fluffy-clouds-on-sky-multi-color-rainbow-image-natural-pink.jpg?s=170667a&w=0&k=20&c=--RrS3yV0SUQ2xHUKgvjEYv8cp2gAEdwaX7POQtGvqw=');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Use min-height for full viewport height */
+    flex-direction: column;
+     /* Add some padding for better spacing */
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto; /* Center horizontally and add some margin */
+    padding: 20px; /* Add padding for better spacing */
+}
+@media (max-width: 768px) {
+    .posts {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+
+.post {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 40px); /* Calculate width to include margins */
+    max-width: 400px;
+    color: #030101;
+    margin: 20px;
+    background-color: beige;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 6px rgba(94, 178, 255, 0.5);
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .post {
+        width: calc(100% - 40px); /* Adjust width for smaller screens */
+        margin-top: 10px; 
+        margin-bottom: 10px; /* Reduce margin on smaller screens */
+    }
+}
+
+.post:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(201, 238, 245);
+}
+
+.img {
+    width: 100%;
+    max-height: 200px; /* Set a maximum height for images */
+    overflow: hidden;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    padding: 10px;
+}
+
+.content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.content p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.content .button {
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #9ccee6;
+    color: #030101;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.content .button:hover {
+    background-color: #e48ca9;
+}
+
+/* Media Query for screens up to 768px wide */
